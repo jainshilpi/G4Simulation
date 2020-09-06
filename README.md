@@ -1,1 +1,1 @@
-# G4Simulation
+# Simple G4 simulation
