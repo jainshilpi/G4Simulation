@@ -1,7 +1,9 @@
 # Simple G4 simulation  ---> 300um Si layer as the only detector
-======================Download the setup=====================
+
+
 (1) git clone https://github.com/jainshilpi/G4Simulation.git
-==============================================================
+
+
 To start setting up the area, first we need to download the G4 dataset files. There is a script getDatasets.sh which you can use. First make sure where you want to download those (may be outside this area)do the following (This download is needed only once):
 
 (2) mkdir ~<PATH>/datasets  
