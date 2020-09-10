@@ -22,6 +22,7 @@
 (10) NOTE: whnever you make any changes to any of the .cc codes, make is needed to be done. If you add another set of files, remove all the contents of build directory (make sure rootfiles are secured) again do cmake .. followed by make
 
 (11) At the end of the run is a root file with a tree named "tree" in it. 
+
 (12) Following variables: 
       "sensorE": gives thte total energy deposited in tht sensor
       "EnergyInTrans": gives the energy in the transverse ring whose radius is given by "radiusBin"
