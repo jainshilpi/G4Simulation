@@ -13,6 +13,8 @@
 
 (6) make   ###At this point, the codes are compiled. To run, do:  
 
-(7) ./shower "mu-" 50   ### first argument is is the particle type and second is the energy in GeV
+(7) ./shower 300 "mu-" 50 2500  ### first argument is is the Si thickness in micro-meters, second is particle type, third is the energy in GeV and fourth is the #events you want to generate
+
+(8) You will see a rootfile with 
 
 (8) NOTE: whnever you make any changes to any of the .cc codes, make is needed to be done. If you add another set of files, remove all the contents of build directory (make sure rootfiles are secured) again do cmake .. followed by make

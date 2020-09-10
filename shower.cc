@@ -89,11 +89,13 @@ int main(int argc,char** argv)
 
   if ( argc == 5 )
     {
-      sensThick = atof(argv[1]);
+
       
-      TString agrument = (argv[3]);
-      name_file = (argv[2]) + agrument + "GeV.root";
-      //name_file = "test.root";				
+      TString enName = (argv[3]);
+      TString thicName = argv[1];
+      
+      name_file = thicName + "_" + (argv[2]) + enName + "GeV.root";
+      sensThick = atof(argv[1]);
       energy = atof (argv[3]);
       part = argv[2];
       nEvents = (int) atof(argv[4]);
