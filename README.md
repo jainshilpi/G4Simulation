@@ -21,5 +21,5 @@
 
 (10) At the end of the run is a root file with a tree named "tree" in it. 
 (11) Following variables: 
-     sensorE: gives thte total energy deposited in tht sensor
-     EnergyInTrans: gives the energy in the transverse ring whose radius is given by radiusBin
+     * sensorE: gives thte total energy deposited in tht sensor
+     * EnergyInTrans: gives the energy in the transverse ring whose radius is given by radiusBin
