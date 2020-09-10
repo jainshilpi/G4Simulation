@@ -32,12 +32,14 @@
 //      GEANT 4 - exampleN01
 // --------------------------------------------------------------
 //#include "G4Track.hh"
-#include "ExN01EventAction.hh"
-#include "ExN01CreateTree.hh"
 
 #include <string>
 #include <vector>
 #include <map>
+#include <iostream>
+
+#include "ExN01EventAction.hh"
+#include "ExN01CreateTree.hh"
 #include "G4RunManager.hh"
 #include "G4UImanager.hh"
 
@@ -71,7 +73,6 @@
 #include "B1Run.hh"
 #include "B1RunAction.hh"
 
-
 #endif
 
 
@@ -80,7 +81,7 @@ using namespace std;
 
 int main(int argc,char** argv) 
 {
-  float energy, stepEnergyTotal;
+  float energy;
   TString name_file;
   std::string part;
   

@@ -69,17 +69,14 @@ void SteppingAction::UserSteppingAction(const G4Step* theStep)
     if(verbosity > 0) std::cout<<""<<std::endl;
     if(verbosity > 0)std::cout<<"Name of preVolume and copy number "<<pre_volName<<" : "<<copyIDinZ<<std::endl;
     
+    /*
     // get volume of the current step
     G4LogicalVolume* volume 
       = theStep->GetPreStepPoint()->GetTouchableHandle()
       ->GetVolume()->GetLogicalVolume();
-    //G4String volumename = "";
-    //volumename = volume -> GetName();
-    //G4cout<<"pre_volume is "<<pre_volName<<endl;
-    //G4cout<<"Post_volume is"<<post_volName<<endl;  
-    //    cout<<"before"<<endl;
+    */
+
     G4double edepStep;
-    //float edepStep;
     
 
     // collect energy deposited in this step

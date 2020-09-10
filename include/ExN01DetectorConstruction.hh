@@ -32,7 +32,7 @@
 #ifndef ExN01DetectorConstruction_H
 #define ExN01DetectorConstruction_H 1
 
-#include "TString.h"
+//#include "TString.h"
 
 class G4LogicalVolume;
 class G4VPhysicalVolume;

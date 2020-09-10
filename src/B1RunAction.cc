@@ -90,8 +90,9 @@ void B1RunAction::EndOfRunAction(const G4Run* run)
   //G4int nofEvents = run->GetNumberOfEvent();
   //if (nofEvents == 0) return;
   
-  const B1Run* b1Run = static_cast<const B1Run*>(run);
+  //const B1Run* b1Run = static_cast<const B1Run*>(run);
 
+  /*
   // Compute dose
   //
   G4double edep  = b1Run->GetEdep();
@@ -100,6 +101,8 @@ void B1RunAction::EndOfRunAction(const G4Run* run)
  // if (rms > 0.) rms = std::sqrt(rms); else rms = 0.;
   G4double dose = edep;
   //cout<<"Deposited energy:"<<"\t"<<edep<<endl;
+  */
+
 
 }
 

@@ -119,12 +119,12 @@ Air->AddElement(elO, fractionmass=30.*perCent);
 
 //defining world environment
 
-G4Box* worldBox = new G4Box("World", 0.5*world_hx, 0.5*world_hy, 0.5*world_hz);
-G4LogicalVolume* worldLog = new G4LogicalVolume(worldBox, Air, "World");
-G4PVPlacement* worldPhys = new G4PVPlacement(0,G4ThreeVector(),worldLog,"World",0,false,0);
+ G4Box* worldBox = new G4Box("World", 0.5*world_hx, 0.5*world_hy, 0.5*world_hz);
+ worldLog = new G4LogicalVolume(worldBox, Air, "World");
+ worldPhys = new G4PVPlacement(0,G4ThreeVector(),worldLog,"World",0,false,0);
 // worldLog->SetVisAttributes (G4VisAttributes::Invisible);
 
-
+ 
  G4double pos_x =  0.0*CLHEP::m;
  G4double pos_y =  0.0*CLHEP::m;
  G4double pos_z =  0.0 * CLHEP::m;
@@ -134,7 +134,7 @@ G4PVPlacement* worldPhys = new G4PVPlacement(0,G4ThreeVector(),worldLog,"World",
  G4Box* solid = new G4Box("ECalSensitive", 0.5*sensorWidth, 0.5*sensorWidth, 0.5*sensorThickness);
  G4LogicalVolume *logSens = new G4LogicalVolume(solid, matSi, "ECalSensitive");
  G4ThreeVector trans;
- trans = G4ThreeVector(0,0,0);
+ trans = G4ThreeVector(pos_x, pos_y, pos_z);
  
  new G4PVPlacement(0,trans,logSens,"sensitiveLayer",worldLog,false,0); ///last argument is for the copy number - useful later
 
