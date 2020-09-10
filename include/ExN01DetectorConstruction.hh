@@ -44,6 +44,7 @@ class ExN01DetectorConstruction : public G4VUserDetectorConstruction
 public:
   
   ExN01DetectorConstruction();
+  ExN01DetectorConstruction(double thick);
   ~ExN01DetectorConstruction();
   
   G4VPhysicalVolume* Construct();

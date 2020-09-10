@@ -84,17 +84,23 @@ int main(int argc,char** argv)
   TString name_file;
   std::string part;
   
-  if ( argc >= 2 )
+  double sensThick;
+  int nEvents;
+
+  if ( argc == 5 )
     {
-      TString agrument = (argv[2]);
-      name_file = (argv[1]) + agrument + "GeV.root";
+      sensThick = atof(argv[1]);
+      
+      TString agrument = (argv[3]);
+      name_file = (argv[2]) + agrument + "GeV.root";
       //name_file = "test.root";				
-      energy = atof (argv[2]);
-      part = argv[1];
+      energy = atof (argv[3]);
+      part = argv[2];
+      nEvents = (int) atof(argv[4]);
     }
   
   else {
-    cout<<"please insert the particle name and energy of incoming particle in GeV"<<endl;
+    cout<<"please run this way: ./shower sensThick(um) partname energy nEvents"<<endl;
     return 0;
   }
   
@@ -111,7 +117,7 @@ int main(int argc,char** argv)
   //
 
   
-  G4VUserDetectorConstruction* detector = new ExN01DetectorConstruction();
+  G4VUserDetectorConstruction* detector = new ExN01DetectorConstruction(sensThick);
   runManager->SetUserInitialization(detector);
   //
 
@@ -154,8 +160,8 @@ int main(int argc,char** argv)
 
   
   //G4int numberOfEvent = 2;
-  G4int numberOfEvent = 2500;
-  cout<<"Particle and beam energy "<<part<<" "<<energy<<endl;
+  G4int numberOfEvent = nEvents;
+  cout<<"Detector thickess : "<<sensThick<<" Particle and beam energy "<<part<<" "<<energy<<endl;
   runManager->BeamOn(numberOfEvent);
   
   cout<<"checkBeamON"<<endl;

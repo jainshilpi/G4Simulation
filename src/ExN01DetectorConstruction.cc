@@ -53,9 +53,11 @@ G4double world_hx = 0.3*m;
 G4double world_hy = 0.3*m;
 G4double world_hz = 2.*m;
 
-
-
 ExN01DetectorConstruction::ExN01DetectorConstruction()
+{}
+
+
+ExN01DetectorConstruction::ExN01DetectorConstruction(double thick)
  :  worldLog(0), absLog(0), outLog(0),
     worldPhys(0), absPhys(0), outPhys(0)
 {
@@ -70,7 +72,8 @@ ExN01DetectorConstruction::ExN01DetectorConstruction()
   this->fInstance = this ;
 
   sensorWidth     = 10*CLHEP::cm;
-  sensorThickness = 300*CLHEP::um;
+  //sensorThickness = 300*CLHEP::um;
+  sensorThickness = thick*CLHEP::um;
   //sensorThickness = 200*CLHEP::um;
 
 }
